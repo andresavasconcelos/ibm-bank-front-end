@@ -1,10 +1,10 @@
 # Web
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Esse projeto tem como objetivo simular operações de um banco, ou seja, cadastro, debitar e creditar valores.
+Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) na versão 17.3.11.
 
 ## Development server
 
-Run `ng serve` para executar a aplicação e depois acesse `http://localhost:4200/`. Assim a aplicação será executada na sua maquina. Não esqueça de subir o back-end antes (https://github.com/andresavasconcelos/ibm-bank-back-end)
+Execute `ng serve` para executar a aplicação e depois acesse `http://localhost:4200/`. Assim a aplicação será executada na sua maquina. Não esqueça de subir o back-end antes (https://github.com/andresavasconcelos/ibm-bank-back-end)
 
 ## Tela de Cadastro
 
