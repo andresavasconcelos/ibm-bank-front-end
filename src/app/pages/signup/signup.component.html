@@ -1,0 +1,47 @@
+
+<app-default-login-layout
+  title = "cadastre e cria uma conta"
+  primaryBtnText="cadastrar conta"
+  secundaryBtnText="acessar conta"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!signupForm.valid"
+>
+  <form [formGroup]="signupForm">
+    <app-primary-input
+            formControlName="document"
+            inputName="document"
+            type="text"
+            label="digite o seu CPF"
+            placeholder="000.000.000-00"
+            (input)="formatCpf($event)"
+    ></app-primary-input>
+
+      
+
+    <app-primary-input
+            formControlName="name"
+            inputName="name"
+            type="text"
+            label="digite o seu nome"
+            placeholder="Maria Li"
+    ></app-primary-input>
+    <app-primary-input
+            formControlName="age"
+            inputName="age"
+            type="text"
+            label="digite a sua idade (somente números)"
+            placeholder="18"
+    ></app-primary-input>
+
+    <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="text"
+            label="digite o seu email"
+            placeholder="meu@email.com"
+    ></app-primary-input>
+  </form>
+</app-default-login-layout>
+
+

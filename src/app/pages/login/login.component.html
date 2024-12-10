@@ -1,0 +1,22 @@
+
+<app-default-login-layout
+  title = "entre na sua conta"
+  primaryBtnText="acessar conta"
+  secundaryBtnText="cadastrar conta"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!loginForm.valid"
+>
+  <form [formGroup]="loginForm">
+    <app-primary-input
+            formControlName="document"
+            inputName="document"
+            type="text"
+            label="digite o seu CPF"
+            placeholder="000.000.000-00"
+    >
+    </app-primary-input>
+  </form>
+</app-default-login-layout>
+
+

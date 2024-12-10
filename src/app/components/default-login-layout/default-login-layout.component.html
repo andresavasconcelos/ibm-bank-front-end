@@ -1,0 +1,28 @@
+<main>
+  <section class="form-section">
+    <img src="/assets/logo.png" alt="">
+    <h2>{{ title }}</h2>
+    <ng-content></ng-content>
+    <div class="btn-wrapper">
+      <button 
+          class="btn-primary" 
+          (click)="submit()"
+          [disabled]="disablePrimaryBtn">
+
+          {{ primaryBtnText }}   
+
+        </button>
+      <div class="divider">
+        <div></div>
+        <span>ou</span>
+        <div></div>
+      </div>
+      <button class="btn-secondary">{{ secundaryBtnText }}</button>
+    </div>
+  </section>
+
+  <section class="main-section">
+    <h1>seu dinheiro é seguro aqui!</h1>
+    <img class="img-login-default" src="/assets/illustration.svg" alt="">
+  </section>
+</main>
