@@ -6,4 +6,11 @@ form {
     flex-direction: column;
     gap: 24px;
     margin-bottom: 34px;
+
+    .error-messages p {
+      color: red;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+    }
 }

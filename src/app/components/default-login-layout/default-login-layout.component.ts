@@ -19,7 +19,7 @@ export class DefaultLoginLayoutComponent {
     this.onSubmit.emit();
   }
 
-  navigate(){
-    this.onNavigate.emit();
+  navigate() {
+    this.onNavigate.emit(); // Emite o evento
   }
 }

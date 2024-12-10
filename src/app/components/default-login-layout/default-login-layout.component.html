@@ -4,12 +4,12 @@
     <h2>{{ title }}</h2>
     <ng-content></ng-content>
     <div class="btn-wrapper">
-      <button 
-          class="btn-primary" 
+      <button
+          class="btn-primary"
           (click)="submit()"
           [disabled]="disablePrimaryBtn">
 
-          {{ primaryBtnText }}   
+          {{ primaryBtnText }}
 
         </button>
       <div class="divider">
@@ -17,12 +17,16 @@
         <span>ou</span>
         <div></div>
       </div>
-      <button class="btn-secondary">{{ secundaryBtnText }}</button>
+      <button (click)="navigate()" class="btn-secondary">
+
+        {{ secundaryBtnText }}
+
+      </button>
     </div>
   </section>
 
   <section class="main-section">
-    <h1>seu dinheiro é seguro aqui!</h1>
+    <h1>o seu dinheiro é seguro aqui!</h1>
     <img class="img-login-default" src="/assets/illustration.svg" alt="">
   </section>
 </main>
