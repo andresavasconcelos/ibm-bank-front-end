@@ -1,0 +1,46 @@
+<div class="bank-container">
+  <!-- Header -->
+  <header class="bank-header">
+    <img [src]="logoUrl" alt="Logo do Banco" class="logo">
+    <div class="balance">Saldo: {{ formattedBalance }}</div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="bank-main">
+    <h2>Bem vindo {{ name }}</h2>
+    <div class="action-container">
+      <!-- Depósito -->
+      <div class="action-box">
+        <h2>Depósito</h2>
+        <input 
+          type="number" 
+          [(ngModel)]="depositAmount" 
+          placeholder="Digite o valor" 
+          class="action-input">
+        <button 
+          (click)="performTransaction('deposit')" 
+          [disabled]="!depositAmount">enviar depósito</button>
+      </div>
+
+      <!-- Transferência -->
+      <div class="action-box">
+        <h2>Transferência</h2>
+        <input 
+          type="number" 
+          [(ngModel)]="transferAmount" 
+          placeholder="Digite o valor" 
+          class="action-input">
+        <button 
+          (click)="performTransaction('transfer')" 
+          [disabled]="!transferAmount">enviar transferência</button>
+      </div>
+    </div>
+
+    <!-- Extrato -->
+    <div class="statement-box">
+      <h2>Extrato</h2>
+      <!-- Conteúdo do extrato -->
+       <p>Não há nenhum histórico de transferencias!</p>
+    </div>
+  </main>
+</div>
