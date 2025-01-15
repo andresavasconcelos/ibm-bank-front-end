@@ -67,10 +67,6 @@ export class LoginComponent {
           const numberAccount = accounts[0].numberAccount;
           const idAccount = accounts[0].id;
 
-          console.log("numberAccount " + numberAccount)
-          console.log("idAccount " + idAccount)
-          console.log("accounts " + accounts)
-
           this.router.navigate(['bank'], { queryParams: { name, balance, numberAccount, idAccount} });
         } else {
           this.toastService.error("Nenhuma conta vinculada a este CPF.");

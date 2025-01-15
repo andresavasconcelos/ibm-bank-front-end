@@ -36,13 +36,13 @@ export class BankHomeComponent implements OnInit  {
 
   ngOnInit(): void {
       this.http.queryParams.subscribe(params => {
-      this.name = params['name'] || 'Name';
-      this.balance = +params['balance'] || 0;
-      this.numberAccount = +params['numberAccount'] || 0;
-      this.idAccount = +params['idAccount'] || 0;
+        this.name = params['name'] || 'Name';
+        this.balance = +params['balance'] || 0;
+        this.numberAccount = +params['numberAccount'] || 0;
+        this.idAccount = +params['idAccount'] || 0;
 
-      this.fetchExtract()
-    });
+        this.fetchExtract()
+      });
   }
 
   get formattedBalance(): string {
@@ -52,7 +52,7 @@ export class BankHomeComponent implements OnInit  {
   performTransaction(type: 'debit' | 'credit', amount: number): void {
 
     if (amount === null || amount <= 0) {
-      alert('Valor inválido para a transação.');
+      alert('Não há valor a ser debitado.');
       return;
     }
 
@@ -109,7 +109,7 @@ export class BankHomeComponent implements OnInit  {
 
     this.loginService.fetchTransactions(this.idAccount).subscribe({
       next: (response) => {
-        console.log("Response:", response);
+
         this.transactions = response;
         this.loadingTransactions = false;
       },

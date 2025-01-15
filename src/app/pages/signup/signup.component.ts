@@ -99,11 +99,11 @@ export class SignupComponent {
         const { name, accounts } = response;
 
         if (accounts && accounts.length > 0) {
-          const account = accounts[0];
-          const balance = account.balance;
-          const numberAccount = account.numberAccount;
+          const idAccount = accounts[0].id;
+          const balance = accounts[0].balance;
+          const numberAccount = accounts[0].numberAccount;
 
-          this.router.navigate(['bank'], { queryParams: { name, balance, numberAccount } });
+          this.router.navigate(['bank'], { queryParams: { name, balance, numberAccount, idAccount } });
         } else {
           this.toastService.error("Nenhuma conta vinculada a este CPF.");
         }
